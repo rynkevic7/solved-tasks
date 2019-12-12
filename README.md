@@ -1,9 +1,16 @@
 # solved-tasks
-#### Invert values
+#### Area of a Square
      
-     Given a set of numbers, return the additive inverse of each. 
-     Each positive becomes negatives, and the negatives become positives.
+     Complete the function that calculates the area of the red square, 
+     when the length of the circular arc A is given as the input. 
+     Return the result rounded to two decimals.
+     Note: use the π value provided in your language (Math::PI, M_PI, math.pi, etc)
+
 
 ```javascript
-const invert = (array) => array.map((e) => e * -1);
+function squareArea(A){
+let s = 4 * (A * A) / (Math.PI * Math.PI)
+console.log(s)
+return +s.toFixed(2); 
+}
 ```
