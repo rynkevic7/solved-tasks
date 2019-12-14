@@ -1,11 +1,24 @@
 # solved-tasks
-#### Count Odd Numbers below n
+#### Basic Mathematical Operations
      
-     Given a number n, return the number of positive odd numbers below n, EASY!
+     The function should take three arguments - operation(string/char), value1(number), value2(number).
+     The function should return result of numbers after applying the chosen operation.
 
 
 ```javascript
-function oddCount(n){
-  return Math.floor(n/2)
+function basicOp(o, v1, v2){
+ switch(o){
+   case '+' : 
+   return v1+v2;
+    break;
+   case '-' : 
+   return v1-v2;
+    break;
+   case '*' : 
+   return v1*v2;
+    break;
+   default : 
+    return v1/v2;
+ }
 }
 ```
