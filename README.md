@@ -1,22 +1,27 @@
 # solved-tasks
-#### Grasshopper - Summation
+#### Beginner Series #3 Sum of Numbers
      
-    Summation
-    Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+    Given two integers a and b, which can be positive or negative, find the sum of all the numbers between including them too and return it. If the two numbers are equal return a or b.
+    
+    Note: a and b are not ordered!
 
 
 ```javascript
-var summation = function (num) {
- let res = 0;
- 
- if(num === 1) return num;
- console.log(num)
- 
- for(let i = 0; i < num; i++){
- if(res += i !== num)
- res += i
- }
- return res;
+function getSum(a,b){
+ let c = 0;
+  
+   if(a === b) {
+     return a;
+   } else if (a < b){
+      for(let i = a; i <= b; i++){
+       c += i
+   }
+  } else{
+     for(let i = b; i <= a; i++){
+     c += i
+   }
+  }
+   return c;
 }
-
+}
 ```
