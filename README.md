@@ -1,26 +1,16 @@
 # solved-tasks
-#### Sum of Multiples
+#### Draw stairs
      
-    Your Job
-    Find the sum of all multiples of n below m
+    given a number n, draw stairs with 'I' n tall and n wide, with the tallest in the top left. Example (with - to represent spaces; DO NOT USE THEM IN THE SOLUTIONS! USE SPACES IN SOLUTION! the "-"s are for clarity.): draw_stairs(3) == '''I\n_I\n__I'''
     
-    Keep in Mind
-    n and m are natural numbers (positive integers)
-    m is excluded from the multiples
-
+    For example, a 7-step stairs should be drawn like this:
 
 ```javascript
-function sumMul(n,m){
-   let res = 0;
-
- if(n <= 0 || m <= 0){
-  return "INVALID";
-  } else {
-   for(let i = n; i < m; i++){
-   if(i % n === 0)
-     res += i;
-  } 
- }
-  return res;
+function drawStairs(n) {
+  let s = '';
+  for(let i = 1; i <= n; i++) {
+  s += i === n ? 'I' : 'I\n' + ' '.repeat(i)
+}
+return s;
 }
 ```
