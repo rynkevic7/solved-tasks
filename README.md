@@ -1,27 +1,22 @@
 # solved-tasks
-#### Sum of the first nth term of Series
+#### Grasshopper - Summation
      
-    Your task is to write a function which returns the sum of following series upto nth term(parameter).
-    
-    Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
-    Rules:
-    You need to round the answer to 2 decimal places and return it as String.
-    
-    If the given value is 0 then it should return 0.00
-    
-    You will only be given Natural Numbers as arguments.
+    Summation
+    Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
 
 ```javascript
-function SeriesSum(n){
-if(!n) return '0.00';
-let sum = 1, j = 4
-for(let i = 1; i < n; i++){
-sum +=1 / j;
-j += 3;
-}
-return sum.toFixed(2)
-}
+var summation = function (num) {
+ let res = 0;
+ 
+ if(num === 1) return num;
+ console.log(num)
+ 
+ for(let i = 0; i < num; i++){
+ if(res += i !== num)
+ res += i
+ }
+ return res;
 }
 
 ```
