@@ -1,9 +1,17 @@
 # solved-tasks
-#### Convert boolean values to strings 'Yes' or 'No'.
+#### Power
      
-    Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+    The goal is to create a function 'numberToPower(number, power)' that "raises" the number up to power (ie multiplies number by itself power times).
 
 
 ```javascript
-const boolToWord=(bool)=> bool ? 'Yes' : 'No'
+function numberToPower(n, p){
+  let res = n;
+  if(p === 0) return 1;
+  for(let i = 1; i < p; i++){
+   res *= n
+   }
+  return res;
+}
+
 ```
