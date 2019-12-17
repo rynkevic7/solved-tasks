@@ -1,27 +1,26 @@
 # solved-tasks
-#### Beginner Series #3 Sum of Numbers
+#### Sum of Multiples
      
-    Given two integers a and b, which can be positive or negative, find the sum of all the numbers between including them too and return it. If the two numbers are equal return a or b.
+    Your Job
+    Find the sum of all multiples of n below m
     
-    Note: a and b are not ordered!
+    Keep in Mind
+    n and m are natural numbers (positive integers)
+    m is excluded from the multiples
 
 
 ```javascript
-function getSum(a,b){
- let c = 0;
-  
-   if(a === b) {
-     return a;
-   } else if (a < b){
-      for(let i = a; i <= b; i++){
-       c += i
-   }
-  } else{
-     for(let i = b; i <= a; i++){
-     c += i
-   }
-  }
-   return c;
-}
+function sumMul(n,m){
+   let res = 0;
+
+ if(n <= 0 || m <= 0){
+  return "INVALID";
+  } else {
+   for(let i = n; i < m; i++){
+   if(i % n === 0)
+     res += i;
+  } 
+ }
+  return res;
 }
 ```
