@@ -1,22 +1,20 @@
 # solved-tasks
-#### Powers of 3
+#### Power of two
      
-   Given a positive integer N, return the largest integer k such that 3^k < N.
+   Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if a given non-negative integer is a power of two. From the corresponding Wikipedia entry:
    
-   For example,
+   a power of two is a number of the form 2n where n is an integer, i.e. the result of exponentiation with number two as the base and integer n as the exponent.
    
-   largest_power(3) == 0
-   largest_power(4) == 1
-   You may assume that the input to your function is always a positive integer.
+   You may assume the input is always valid.
+   
+   Examples
+   isPowerOfTwo(1024) // -> true
+   isPowerOfTwo(4096) // -> true
+   isPowerOfTwo(333)  // -> false
+   Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
    
    
    
 ```javascript
-function largestPower(n){
-  let k = 0;
-  while (3 ** k < n)
-  k++;
-  
-  return k - 1
-}
+const isPowerOfTwo = n => Number.isInteger(Math.log2(n))
 ```
