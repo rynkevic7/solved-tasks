@@ -1,11 +1,12 @@
 # solved-tasks
-#### Power of two
+#### Beginner Series #4 Cockroach
      
-   Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if a given non-negative integer is a power of two. From the corresponding Wikipedia entry:
+   The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
    
-   a power of two is a number of the form 2n where n is an integer, i.e. the result of exponentiation with number two as the base and integer n as the exponent.
+   For example:
    
-   You may assume the input is always valid.
+   cockroachSpeed(1.08) == 30
+   Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
    
    Examples
    isPowerOfTwo(1024) // -> true
@@ -16,5 +17,5 @@
    
    
 ```javascript
-const isPowerOfTwo = n => Number.isInteger(Math.log2(n))
+const cockroachSpeed = s => Math.floor((((s * 1000) * 100) /60) /60)
 ```
