@@ -1,13 +1,22 @@
 # solved-tasks
-#### How many times should I go?
+#### Return the closest number multiple of 10
      
-  Lot of museum allow you to be a member, for a certain amount amount_by_year you can have unlimitted acces to the museum.
+  Given a number return the closest number to it that is divisible by 10.
   
-  In this kata you should complete a function in order to know after how many visit it will be better to take an annual pass. The function take 2 arguments annual_price and individual_price.
+  Example input:
+  
+  22
+  25
+  37
+  Expected output:
+  
+  20
+  30
+  40
    
    
    
 ```javascript
-const howManyTimes = (a, i) => Math.ceil(a / i);
+const closestMultiple10 = num => Math.round(num/10) * 10;
 
 ```
