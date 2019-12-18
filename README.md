@@ -1,8 +1,8 @@
 # solved-tasks
-#### Return Negative
+#### Opposite number
      
-    In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+    Very simple, given a number, find its opposite.
 
 ```javascript
-const makeNegative = num => num < 0 ? num : -num;
+const opposite = n => n < 0 ? n * -1 : -n;
 ```
