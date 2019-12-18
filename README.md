@@ -1,21 +1,16 @@
 # solved-tasks
-#### Beginner Series #4 Cockroach
+#### BHoliday VIII - Duty Free
      
-   The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+   The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.
    
-   For example:
+   You will be given the high street price (normPrice), the duty free discount (discount) and the cost of the holiday.
    
-   cockroachSpeed(1.08) == 30
-   Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
+   For example, if a bottle cost £10 normally and the discount in duty free was 10%, you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.
    
-   Examples
-   isPowerOfTwo(1024) // -> true
-   isPowerOfTwo(4096) // -> true
-   isPowerOfTwo(333)  // -> false
-   Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
+   All inputs will be integers. Please return an integer. Round down.
    
    
    
 ```javascript
-const cockroachSpeed = s => Math.floor((((s * 1000) * 100) /60) /60)
+const dutyFree = (n, d, h) => Math.floor(h / ((n / 100) * d))
 ```
