@@ -1,23 +1,19 @@
 # solved-tasks
-#### BASIC: Making Six Toast.
+#### Closest elevator
      
-   Story:
-   You are going to make toast fast, you think that you should make multiple pieces of toasts and once. So, you try to make 6 pieces of toast.
+   Given 2 elevators (named "left" and "right") in a building with 3 floors (numbered 0 to 2), write a function elevator accepting 3 arguments (in order):
    
-   Problem:
-   You forgot to count the number of toast you put into there, you don't know if you put exactly six pieces of toast into the toasters.
+   left - The current floor of the left elevator
+   right - The current floor of the right elevator
+   call - The floor that called an elevator
+   It should return the name of the elevator closest to the called floor ("left"/"right").
    
-   Define a function that counts how many more (or less) pieces of toast you need in the toasters. Even though you need more or less, the number will still be positive, not negative.
+   In the case where both elevators are equally distant from the called floor, choose the elevator to the right.
    
-   Examples:
-   You must return the number of toast the you need to put in (or to take out). In case of 5 you can still put 1 toast in:
+   You can assume that the inputs will always be valid integers between 0-2.
    
-   six_toast(5) == 1
-   And in case of 12 you need 6 toasts less (but not -6):
    
-   six_toast(12) == 6
-   Good luck!
-
+   
 ```javascript
-const sixToast = num => num > 6 ? num - 6 : 6 - num;
+const elevator = (left, right, call) => Math.abs(call-left) < Math.abs(call-right) ? 'left' : 'right'
 ```
