@@ -1,22 +1,22 @@
 # solved-tasks
-#### Return the closest number multiple of 10
+#### Formatting decimal places #1
      
-  Given a number return the closest number to it that is divisible by 10.
+  ach floating-point number should be formatted that only the first two decimal places are returned. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.
   
-  Example input:
+  Don't round the numbers! Just cut them after two decimal places!
   
-  22
-  25
-  37
-  Expected output:
+  Right examples:  
+  32.8493 is 32.84  
+  14.3286 is 14.32
   
-  20
-  30
-  40
+  Incorrect examples (e.g. if you round the numbers):  
+  32.8493 is 32.85  
+  14.3286 is 14.33
    
    
    
 ```javascript
-const closestMultiple10 = num => Math.round(num/10) * 10;
+const twoDecimalPlaces = n => Math.trunc(n * 100) / 100; 
+
 
 ```
