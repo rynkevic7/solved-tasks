@@ -1,11 +1,8 @@
 # solved-tasks
-#### Is integer safe to use?
+#### Return Negative
      
-    Not all integers can be represented by JavaScript/TypeScript. 
-    It has space to to represent 53bit signed integers. In this Kata, 
-    we've to determine if it is safe to use the integer or not. 
-    Make use of the latest ES6 features to find this.
+    In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
 
 ```javascript
-const SafeInteger = n => Number.isSafeInteger(n);
+const makeNegative = num => num < 0 ? num : -num;
 ```
