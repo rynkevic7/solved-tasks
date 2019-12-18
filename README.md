@@ -1,15 +1,11 @@
 # solved-tasks
-#### Filter the number
+#### Is integer safe to use?
      
-    Filter the number
-    Oh no! The number has been mixed up with the text. Your goal is to retreive the number from the text, can you return the number back to it's original state?
-    
-    Task
-    Your task is to return a number from a string.
-    
-    Details
-    You will be given a string of numbers and letters mixed up, you have to return all the numbers in that string in the order they occur.
+    Not all integers can be represented by JavaScript/TypeScript. 
+    It has space to to represent 53bit signed integers. In this Kata, 
+    we've to determine if it is safe to use the integer or not. 
+    Make use of the latest ES6 features to find this.
 
 ```javascript
-var FilterString = v => +v.replace(/\D+/g,"");
+const SafeInteger = n => Number.isSafeInteger(n);
 ```
