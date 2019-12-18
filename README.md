@@ -1,16 +1,13 @@
 # solved-tasks
-#### BHoliday VIII - Duty Free
+#### How many times should I go?
      
-   The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.
-   
-   You will be given the high street price (normPrice), the duty free discount (discount) and the cost of the holiday.
-   
-   For example, if a bottle cost £10 normally and the discount in duty free was 10%, you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.
-   
-   All inputs will be integers. Please return an integer. Round down.
+  Lot of museum allow you to be a member, for a certain amount amount_by_year you can have unlimitted acces to the museum.
+  
+  In this kata you should complete a function in order to know after how many visit it will be better to take an annual pass. The function take 2 arguments annual_price and individual_price.
    
    
    
 ```javascript
-const dutyFree = (n, d, h) => Math.floor(h / ((n / 100) * d))
+const howManyTimes = (a, i) => Math.ceil(a / i);
+
 ```
