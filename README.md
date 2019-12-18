@@ -1,19 +1,14 @@
 # solved-tasks
-#### Closest elevator
+#### Find the next perfect square!
      
-   Given 2 elevators (named "left" and "right") in a building with 3 floors (numbered 0 to 2), write a function elevator accepting 3 arguments (in order):
+   You might know some pretty large perfect squares. But what about the NEXT one?
    
-   left - The current floor of the left elevator
-   right - The current floor of the right elevator
-   call - The floor that called an elevator
-   It should return the name of the elevator closest to the called floor ("left"/"right").
+   Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
    
-   In the case where both elevators are equally distant from the called floor, choose the elevator to the right.
-   
-   You can assume that the inputs will always be valid integers between 0-2.
+   If the parameter is itself not a perfect square, than -1 should be returned. You may assume the parameter is positive.
    
    
    
 ```javascript
-const elevator = (left, right, call) => Math.abs(call-left) < Math.abs(call-right) ? 'left' : 'right'
+const findNextSquare = sq => sq % Math.sqrt(sq) === 0 ? (Math.sqrt(sq)+1)**2 : -1;
 ```
