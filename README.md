@@ -1,16 +1,12 @@
 # solved-tasks
-#### Draw stairs
+#### isReallyNaN
      
-    given a number n, draw stairs with 'I' n tall and n wide, with the tallest in the top left. Example (with - to represent spaces; DO NOT USE THEM IN THE SOLUTIONS! USE SPACES IN SOLUTION! the "-"s are for clarity.): draw_stairs(3) == '''I\n_I\n__I'''
+    I've hit a few bugs in my Java/Type/Coffee-script code recently, and I've traced the problem back to the global isNaN function I was using. I had expected it to be more discerning, but it's returning true for undefined right now.
     
-    For example, a 7-step stairs should be drawn like this:
+    Write a function isReallyNaN that returns true only if passed in an argument that evalutes to NaN, and returns false otherwise.
+    
+    Any solution is acceptable!
 
 ```javascript
-function drawStairs(n) {
-  let s = '';
-  for(let i = 1; i <= n; i++) {
-  s += i === n ? 'I' : 'I\n' + ' '.repeat(i)
-}
-return s;
-}
+const isReallyNaN = val =>  Number.isNaN(val);
 ```
