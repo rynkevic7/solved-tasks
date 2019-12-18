@@ -1,12 +1,15 @@
 # solved-tasks
-#### isReallyNaN
+#### Filter the number
      
-    I've hit a few bugs in my Java/Type/Coffee-script code recently, and I've traced the problem back to the global isNaN function I was using. I had expected it to be more discerning, but it's returning true for undefined right now.
+    Filter the number
+    Oh no! The number has been mixed up with the text. Your goal is to retreive the number from the text, can you return the number back to it's original state?
     
-    Write a function isReallyNaN that returns true only if passed in an argument that evalutes to NaN, and returns false otherwise.
+    Task
+    Your task is to return a number from a string.
     
-    Any solution is acceptable!
+    Details
+    You will be given a string of numbers and letters mixed up, you have to return all the numbers in that string in the order they occur.
 
 ```javascript
-const isReallyNaN = val =>  Number.isNaN(val);
+var FilterString = v => +v.replace(/\D+/g,"");
 ```
