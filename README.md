@@ -1,32 +1,42 @@
 # solved-tasks
-#### Lario and Muigi Pipe Problem
+#### Expressions Matter
      
-  #Issue Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
+  Task
+  Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ().
   
-  The pipes connecting your level's stages together need to be fixed before you recieve any more complaints. Each pipe should be connecting, since the levels ascend, you can assume every number in the sequence after the first index will be greater than the previous and that there will be no duplicates.
+  Consider an Example :
+  With the numbers are 1, 2 and 3 , here are some ways of placing signs and brackets:
   
-  #Task Given the a list of numbers, return the list so that the values increment by 1 for each index up to the maximum value.
+  1 * (2 + 3) = 5
+  1 * 2 * 3 = 6
+  1 + 2 * 3 = 7
+  (1 + 2) * 3 = 9
+  So the maximum value that you can obtain is 9.
   
-  #Example:
+  Notes
+  The numbers are always positive.
+  The numbers are in the range (1  ≤  a, b, c  ≤  10).
+  You can use the same operation more than once.
+  It's not necessary to place all the signs and brackets.
+  Repetition in numbers may occur .
+  You cannot swap the operands. For instance, in the given example you cannot get expression (1 + 3) * 2 = 8.
+  Input >> Output Examples:
+  expressionsMatter(1,2,3)  ==>  return 9
+  Explanation:
+  After placing signs and brackets, the Maximum value obtained from the expression (1+2) * 3 = 9.
   
-  Input: 1,3,5,6,7,8
+  expressionsMatter(1,1,1)  ==>  return 3
+  Explanation:
+  After placing signs, the Maximum value obtained from the expression is 1 + 1 + 1 = 3.
   
-  Output: 1,2,3,4,5,6,7,8
+  expressionsMatter(9,1,1)  ==>  return 18
+  Explanation:
+  After placing signs and brackets, the Maximum value obtained from the expression is 9 * (1+1) = 18.
    
    
    
 ```javascript
-function pipeFix(n){
-let sorted = [];
-let min = Math.min.apply(this, n);
-let max = Math.max.apply(this, n);
-
-
-for(let i = min; i <= max; i++){
-sorted.push(i)
-}
-return sorted;
-}
+const expressionMatter = (a, b, c) => Math.max(a + b + c, a * b * c, (a + b) * c, a * (b + c));
 
 
 ```
