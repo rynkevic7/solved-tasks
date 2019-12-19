@@ -1,30 +1,32 @@
 # solved-tasks
-#### Tortoise racing
+#### Lario and Muigi Pipe Problem
      
-  Two tortoises named A and B must run a race. A starts with an average speed of 720 feet per hour. Young B knows she runs faster than A, and furthermore has not finished her cabbage.
+  #Issue Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
   
-  When she starts, at last, she can see that A has a 70 feet lead but B's speed is 850 feet per hour. How long will it take B to catch A?
+  The pipes connecting your level's stages together need to be fixed before you recieve any more complaints. Each pipe should be connecting, since the levels ascend, you can assume every number in the sequence after the first index will be greater than the previous and that there will be no duplicates.
   
-  More generally: given two speeds v1 (A's speed, integer > 0) and v2 (B's speed, integer > 0) and a lead g (integer > 0) how long will it take B to catch A?
+  #Task Given the a list of numbers, return the list so that the values increment by 1 for each index up to the maximum value.
   
-  The result will be an array [hour, min, sec] which is the time needed in hours, minutes and seconds (round down to the nearest second) or a string in some languages.
+  #Example:
   
-  If v1 >= v2 then return nil, nothing, null, None or {-1, -1, -1} for C++, C, Go, Nim, [] for Kotlin or "-1 -1 -1".
+  Input: 1,3,5,6,7,8
+  
+  Output: 1,2,3,4,5,6,7,8
    
    
    
 ```javascript
-function race(v1, v2, g) {
-if(v1 >= v2) return null
-  
-  let time = Math.trunc(g * 3600 / (v2 - v1))
-  let h = Math.trunc(time / 3600)
-  let mn = Math.trunc((time % 3600) / 60)
-  let s = Math.trunc(time % 60)
-  let time_required = [];
-      time_required.push(h, mn, s)
-  return time_required
-  }
+function pipeFix(n){
+let sorted = [];
+let min = Math.min.apply(this, n);
+let max = Math.max.apply(this, n);
+
+
+for(let i = min; i <= max; i++){
+sorted.push(i)
+}
+return sorted;
+}
 
 
 ```
