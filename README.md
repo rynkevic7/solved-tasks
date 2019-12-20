@@ -1,62 +1,34 @@
 # solved-tasks
-#### Building blocks
+#### Two fighters, one winner.
      
-  Write a class Block that creates a block (Duh..)
+  Create a function that returns the name of the winner in a fight between two fighters.
   
-  ##Requirements
+  Each fighter takes turns attacking the other and whoever kills the other first is victorious. Death is defined as having health <= 0.
   
-  The constructor should take an array as an argument, this will contain 3 integers of the form [width, length, height] from which the Block should be created.
+  Each fighter will be a Fighter object/instance. See the Fighter class below in your chosen language.
   
-  Define these methods:
-  
-  `getWidth()` return the width of the `Block`
-  
-  `getLength()` return the length of the `Block`
-  
-  `getHeight()` return the height of the `Block`
-  
-  `getVolume()` return the volume of the `Block`
-  
-  `getSurfaceArea()` return the surface area of the `Block`
-  ##Examples
-  
-      Block b = new Block(new int[]{2,4,6}) -> creates a `Block` object with a width of `2` a length of `4` and a height of `6`
-      b.getWidth() // -> 2
-  
-      b.getLength() // -> 4
-  
-      b.getHeight() // -> 6
-  
-      b.getVolume() // -> 48
-  
-      b.getSurfaceArea() // -> 88
-  Note: no error checking is needed
-  
-  Any feedback would be much appreciated
+  Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
    
    
    
 ```javascript
-public class Block {
 
-        int Width;
-        int Length;
-        int Height;
-        int Volume;
-        int SurfaceArea;
-
-        public Block(int[] array) {
-            this.Width = array[0];
-            this.Length = array [1];
-            this.Height = array [2];
-            this.Volume = Width * Length * Height;
-            this.SurfaceArea = 2 * Length * Height + 2 * Length * Width + 2 * Width * Height;
+public class Kata {
+          public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
+            while (fighter1.health > 0 && fighter2.health > 0) {
+                fighter1.health -= fighter2.damagePerAttack;
+                fighter2.health -= fighter1.damagePerAttack;
+            }
+            
+            if (fighter1.health <= 0 && fighter2.health <= 0) {
+                return firstAttacker;
+            } else if (fighter1.health <= 0) {
+                return fighter2.name; 
+            } else {
+                return fighter1.name; 
+            }
+            
         }
-
-        public int getWidth() {
-            return Width;
-        }
-
-
+}
 
 ```
