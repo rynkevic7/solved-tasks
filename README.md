@@ -1,23 +1,15 @@
 # solved-tasks
 
-#### Is every value in the array an array?
+#### Enumerable Magic #3 - Does My List Include This?
      
- Is every value in the array an array?
- 
- This should only test the second array dimension of the array. The values of the nested arrays don't have to be arrays.
- 
- Examples:
- 
- [[1],[2]] => true
- ['1','2'] => false
- [{1:1},{2:2}] => false
+ Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
   
    
    
 ```javascript
 
-const arrCheck = value => value.every((el) => Array.isArray(el));
-}
+const include = (arr, item) => arr.includes(item, 0)
+
 
 
 
