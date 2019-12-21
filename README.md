@@ -1,26 +1,24 @@
 # solved-tasks
 
-#### Count the Monkeys!
+#### Filling an array (part 1)
      
- You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
+ We want an array, but not just any old array, an array with contents!
  
- As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
+ Write a function that produces an array with the numbers 0 to N-1 in it.
  
- For example:
- 
- monkeyCount(10) // --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
- monkeyCount(1) // --> [1]
+ For example, the following code will result in an array containing the numbers 0 to 4:
   
    
    
 ```javascript
 
-function monkeyCount(n) {
-let res = [];
-for(let i = 1; i <= n; i++){
-res.push(i)
+function arr(N){
+if (N < 0 || N === undefined) return [];
+let newArr = [];
+for(let i = 0; i < N; i++){
+newArr.push(i)
 }
-return res;
+return newArr
 }
 
 
