@@ -1,27 +1,24 @@
 # solved-tasks
-#### Sum Arrays
+
+#### Count the Monkeys!
      
- Sum Array
- Write a method sum (sum_array in python, sumarray in julia, SumArray in C#) that takes an array of numbers and returns the sum of the numbers. These may be integers or decimals for Ruby and any instance of Num for Haskell. The numbers can also be negative. If the array does not contain any numbers then you should return 0.
+ You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
  
- Examples
- numbers = [1, 5.2, 4, 0, -1]
- puts sum(numbers)
- 9.2
- Assumptions
- You can assume that you are only given numbers.
- You cannot assume the size of the array.
- You can assume that you do get an array and if the array is empty, return 0.
+ As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
+ 
+ For example:
+ 
+ monkeyCount(10) // --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ monkeyCount(1) // --> [1]
   
    
    
 ```javascript
 
-function sum (numbers) {
-if(numbers.length < 0) return 0;
-let res = 0;
-for(let i = 0; i <= numbers.length-1; i++){
-res += numbers[i];
+function monkeyCount(n) {
+let res = [];
+for(let i = 1; i <= n; i++){
+res.push(i)
 }
 return res;
 }
