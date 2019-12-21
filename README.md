@@ -1,23 +1,22 @@
 # solved-tasks
 
-#### What is type of variable?
+#### Is every value in the array an array?
      
- Create a function to return true type of variable, i.e.
+ Is every value in the array an array?
  
- type([]) => 'array'
- type({}) => 'object'
- type('') => 'string'
- type(NaN) => 'number'
+ This should only test the second array dimension of the array. The values of the nested arrays don't have to be arrays.
+ 
+ Examples:
+ 
+ [[1],[2]] => true
+ ['1','2'] => false
+ [{1:1},{2:2}] => false
   
    
    
 ```javascript
 
-function type(value) {
-if ({}.toString.call(value) === "[object Null]") return 'null';
-if ({}.toString.call(value) === "[object Date]") return 'date';
-if ({}.toString.call(value) === "[object Array]") return 'array';
-  return typeof(value);
+const arrCheck = value => value.every((el) => Array.isArray(el));
 }
 
 
