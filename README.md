@@ -1,31 +1,31 @@
 # solved-tasks
 
-#### Counting sheep...
+#### A Needle in the Haystack
      
- Consider an array of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+ Can you find the needle in the haystack?
  
- For example,
+ Write a function findNeedle() that takes an array full of junk but containing one "needle"
  
- [true,  true,  true,  false,
-   true,  true,  true,  true ,
-   true,  false, true,  false,
-   true,  false, false, true ,
-   true,  true,  true,  true ,
-   false, false, true,  true]
+ After your function finds the needle it should return a message (as a string) that says:
+ 
+ "found the needle at position " plus the index it found the needle, so:
+ 
+ findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
+ should return "found the needle at position 5"
   
    
    
 ```javascript
 
-function countSheeps(arrayOfSheep) {
-let count = 0;
-  for(let i = 0; i < arrayOfSheep.length; i++){
-  if (arrayOfSheep[i] === true){
-  count++;
+function findNeedle(haystack) {
+  let res = 0;
+  for (let i = 0; i < haystack.length; i++){
+  if(haystack[i] === 'needle'){
+  res = i
    }
   }
- return count;
-}  
+  return `found the needle at position ${res}`
+}
 
 
 
