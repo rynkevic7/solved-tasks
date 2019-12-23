@@ -1,31 +1,32 @@
 # solved-tasks
 
-#### A Needle in the Haystack
+#### Find the first non-consecutive number
      
- Can you find the needle in the haystack?
+ Your task is to find the first element of an array that is not consecutive.
  
- Write a function findNeedle() that takes an array full of junk but containing one "needle"
+ E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
  
- After your function finds the needle it should return a message (as a string) that says:
+ If the whole array is consecutive then return null or Nothing.
  
- "found the needle at position " plus the index it found the needle, so:
+ The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
  
- findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
- should return "found the needle at position 5"
+ If you like this Kata, maybe try this one next: https://www.codewars.com/kata/represent-array-of-numbers-as-ranges
+ 
+ 1) Can you write a solution that will return null for both [] and [ x ] though? ( This is not tested, but you can write your own example test. )
   
    
    
 ```javascript
 
-function findNeedle(haystack) {
-  let res = 0;
-  for (let i = 0; i < haystack.length; i++){
-  if(haystack[i] === 'needle'){
-  res = i
-   }
-  }
-  return `found the needle at position ${res}`
+function firstNonConsecutive (arr) {
+for(let i = 0; i < arr.length - 1; i++){
+let min = arr[i] + 1;
+let consecutive = arr[i + 1]
+if(min !== consecutive) return consecutive;
+} 
+return null;
 }
+
 
 
 
