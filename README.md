@@ -1,20 +1,19 @@
 # solved-tasks
 
-#### Find numbers which are divisible by given number
+#### Removing Elements
      
- Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+ Take an array and remove every second element out of that array. Always keep the first element and start removing with the next element.
  
- Example
- divisibleBy([1, 2, 3, 4, 5, 6], 2) == [2, 4, 6]
+ Example:
+ 
+ myArr = ['Keep', 'Remove', 'Keep', 'Remove', 'Keep', ...];
+ None of the arrays will be empty, so you don't have to worry about that!
   
    
    
 ```javascript
 
-function divisibleBy(numbers, divisor){
-let arr = numbers.filter(el => el % divisor === 0) 
-return arr;
-}
+const removeEveryOther = arr => arr.filter((el, i) => i % 2 === 0)
 
 
 
