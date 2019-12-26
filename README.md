@@ -1,31 +1,18 @@
 # solved-tasks
 
-#### Find the first non-consecutive number
+#### You only need one - Beginner
      
- Your task is to find the first element of an array that is not consecutive.
+ You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
  
- E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
+ Array can contain numbers or strings. X can be either.
  
- If the whole array is consecutive then return null or Nothing.
- 
- The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
- 
- If you like this Kata, maybe try this one next: https://www.codewars.com/kata/represent-array-of-numbers-as-ranges
- 
- 1) Can you write a solution that will return null for both [] and [ x ] though? ( This is not tested, but you can write your own example test. )
+ Return true if the array contains the value, false if not.
   
    
    
 ```javascript
 
-function firstNonConsecutive (arr) {
-for(let i = 0; i < arr.length - 1; i++){
-let min = arr[i] + 1;
-let consecutive = arr[i + 1]
-if(min !== consecutive) return consecutive;
-} 
-return null;
-}
+const check = (a, x) => a.includes(x);
 
 
 
