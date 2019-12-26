@@ -1,19 +1,20 @@
 # solved-tasks
 
-#### Be Concise IV - Index of an element in an array
+#### Find numbers which are divisible by given number
      
- Be Concise IV - Index of an element in an array
- Task
- Provided is a function find which accepts two parameters in the following order: array, 
- element and returns the index of the element if found and "Not found" otherwise. 
- Your task is to shorten the code as much as possible in order to meet the strict character count requirements of the Kata. 
- You may assume that all array elements are unique.
+ Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+ 
+ Example
+ divisibleBy([1, 2, 3, 4, 5, 6], 2) == [2, 4, 6]
   
    
    
 ```javascript
 
-const find=(a, e)=> a.indexOf(e) === -1 ? "Not found" : a.indexOf(e)
+function divisibleBy(numbers, divisor){
+let arr = numbers.filter(el => el % divisor === 0) 
+return arr;
+}
 
 
 
