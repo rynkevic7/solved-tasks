@@ -1,19 +1,19 @@
 # solved-tasks
 
-#### You only need one - Beginner
+#### Be Concise IV - Index of an element in an array
      
- You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
- 
- Array can contain numbers or strings. X can be either.
- 
- Return true if the array contains the value, false if not.
+ Be Concise IV - Index of an element in an array
+ Task
+ Provided is a function find which accepts two parameters in the following order: array, 
+ element and returns the index of the element if found and "Not found" otherwise. 
+ Your task is to shorten the code as much as possible in order to meet the strict character count requirements of the Kata. 
+ You may assume that all array elements are unique.
   
    
    
 ```javascript
 
-const check = (a, x) => a.includes(x);
-
+const find=(a, e)=> a.indexOf(e) === -1 ? "Not found" : a.indexOf(e)
 
 
 
