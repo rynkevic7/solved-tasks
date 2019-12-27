@@ -1,23 +1,19 @@
 # solved-tasks
 
-#### Convert number to reversed array of digits
+#### My head is at the wrong end!
      
- Convert number to reversed array of digits
- Given a random number:
+ You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
  
- C#: long;
- C++: unsigned long;
- You have to return the digits of this number within an array in reverse order.
+ Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
  
- Example:
- 348597 => [7,9,5,8,4,3]
+ Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics - simples!
 
   
    
    
 ```javascript
 
-const digitize = n => n.toString().split('').reverse().map(Number);
+const fixTheMeerkat = arr => arr.reverse()
 
 
 
