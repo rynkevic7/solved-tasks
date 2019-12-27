@@ -1,31 +1,17 @@
 # solved-tasks
 
-#### Train to remove duplicates from an array with filter()
+#### Santa's Naughty List
      
- In this kata your task is to remove all the duplicates from the array using a standart build-in method - Array.prototype.filter(); return the array containing unique values only.
+ Christmas is coming, and Santa has a long list to go through, to find who deserves presents for the big day. Go through a list of children, and return a list containing every child who appeared on Santa's list. Do not add any child more than once. Output should be sorted.
  
- Tip: use the index of value(s) to solve this kata
- 
- If you are not familiar with filter() - info is here:
- 
- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
- 
- For example:
- 
- var arr = [4];
- 
- unique(arr); // should return [4]
- 
- var arr = [1,1,1,2,2,3];
- 
- unique(arr); // should return [1,2,3]
+ Comparison should be case sensitive and the returned list should contain only one copy of each name: "Sam" and "sam" are different, but "sAm" and "sAm" are not.
 
   
    
    
 ```javascript
 
-const unique = arr => arr.filter((el, i) => i === arr.indexOf(el));
+const findChildren = (s, c) => [...new Set(c.filter(el=> s.includes(el)).sort())];
 
 
 
