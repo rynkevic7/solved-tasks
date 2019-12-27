@@ -1,21 +1,22 @@
 # solved-tasks
 
-#### filterEvenLengthWords
+#### Array.diff
      
- Write a function called "filterEvenLengthWords".
+ Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
  
- Given an array of strings, "filterEvenLengthWords" returns an array containing only the elements of the given array whose length is an even number.
+ It should remove all values from list a, which are present in list b.
  
- var output = filterEvenLengthWords(['word', 'words', 'word', 'words']);
+ array_diff([1,2],[1]) == [2]
+ If a value is present in b, all of its occurrences must be removed from the other:
  
- console.log(output); // --> ['word', 'word']
+ array_diff([1,2,2,2,3],[2]) == [1,3]
 
   
    
    
 ```javascript
 
-const filterEvenLengthWords = w => w.filter(el=> el.length % 2 === 0);
+const array_diff = (a, b) => a.filter(el => !b.includes(el));
 
 
 
