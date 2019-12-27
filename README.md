@@ -1,19 +1,21 @@
 # solved-tasks
 
-#### JavaScript Array Filter
+#### filterEvenLengthWords
      
- JavaScript Arrays support a filter function (starting in JavaScript 1.6). Use the filter functionality to complete the function given.
+ Write a function called "filterEvenLengthWords".
  
- The solution would work like the following:
+ Given an array of strings, "filterEvenLengthWords" returns an array containing only the elements of the given array whose length is an even number.
  
- getEvenNumbers([2,4,5,6]) // should == [2,4,6]
+ var output = filterEvenLengthWords(['word', 'words', 'word', 'words']);
+ 
+ console.log(output); // --> ['word', 'word']
 
   
    
    
 ```javascript
 
-const getEvenNumbers = numbersArray => numbersArray.filter(el=> el % 2 === 0);
+const filterEvenLengthWords = w => w.filter(el=> el.length % 2 === 0);
 
 
 
