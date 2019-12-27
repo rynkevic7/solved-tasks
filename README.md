@@ -1,22 +1,21 @@
 # solved-tasks
 
-#### Array.diff
+#### Find Duplicates
      
- Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+ Given an array, find the duplicates in that array, and return a new array of those duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
  
- It should remove all values from list a, which are present in list b.
+ Note: numbers and their corresponding string representations should not be treated as duplicates (i.e., '1' !== 1).
  
- array_diff([1,2],[1]) == [2]
- If a value is present in b, all of its occurrences must be removed from the other:
- 
- array_diff([1,2,2,2,3],[2]) == [1,3]
+ Examples
+ [1, 2, 4, 4, 3, 3, 1, 5, 3, '5']  ==>  [4, 3, 1]
+ [0, 1, 2, 3, 4, 5]                ==>  []
 
   
    
    
 ```javascript
 
-const array_diff = (a, b) => a.filter(el => !b.includes(el));
+const duplicates= arr => arr.filter((el, i) => i !== arr.indexOf(el) && i === arr.lastIndexOf(el));
 
 
 
