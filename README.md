@@ -1,17 +1,23 @@
 # solved-tasks
 
-#### Santa's Naughty List
+#### Convert number to reversed array of digits
      
- Christmas is coming, and Santa has a long list to go through, to find who deserves presents for the big day. Go through a list of children, and return a list containing every child who appeared on Santa's list. Do not add any child more than once. Output should be sorted.
+ Convert number to reversed array of digits
+ Given a random number:
  
- Comparison should be case sensitive and the returned list should contain only one copy of each name: "Sam" and "sam" are different, but "sAm" and "sAm" are not.
+ C#: long;
+ C++: unsigned long;
+ You have to return the digits of this number within an array in reverse order.
+ 
+ Example:
+ 348597 => [7,9,5,8,4,3]
 
   
    
    
 ```javascript
 
-const findChildren = (s, c) => [...new Set(c.filter(el=> s.includes(el)).sort())];
+const digitize = n => n.toString().split('').reverse().map(Number);
 
 
 
