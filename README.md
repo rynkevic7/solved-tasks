@@ -1,21 +1,31 @@
 # solved-tasks
 
-#### Find Duplicates
+#### Train to remove duplicates from an array with filter()
      
- Given an array, find the duplicates in that array, and return a new array of those duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
+ In this kata your task is to remove all the duplicates from the array using a standart build-in method - Array.prototype.filter(); return the array containing unique values only.
  
- Note: numbers and their corresponding string representations should not be treated as duplicates (i.e., '1' !== 1).
+ Tip: use the index of value(s) to solve this kata
  
- Examples
- [1, 2, 4, 4, 3, 3, 1, 5, 3, '5']  ==>  [4, 3, 1]
- [0, 1, 2, 3, 4, 5]                ==>  []
+ If you are not familiar with filter() - info is here:
+ 
+ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+ 
+ For example:
+ 
+ var arr = [4];
+ 
+ unique(arr); // should return [4]
+ 
+ var arr = [1,1,1,2,2,3];
+ 
+ unique(arr); // should return [1,2,3]
 
   
    
    
 ```javascript
 
-const duplicates= arr => arr.filter((el, i) => i !== arr.indexOf(el) && i === arr.lastIndexOf(el));
+const unique = arr => arr.filter((el, i) => i === arr.indexOf(el));
 
 
 
