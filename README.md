@@ -1,20 +1,20 @@
 # solved-tasks
 
-#### My head is at the wrong end!
+#### Two Oldest Ages
      
- You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
+ The two oldest ages function/method needs to be completed. It should take an array of numbers as its argument and return the two highest numbers within the array. The returned value should be an array in the format [second oldest age, oldest age].
  
- Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
+ The order of the numbers passed in could be any order. The array will always include at least 2 items.
  
- Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics - simples!
-
+ For example:
+ 
+ twoOldestAges( [1, 2, 10, 8] ) // should return [8, 10]
   
    
    
 ```javascript
 
-const fixTheMeerkat = arr => arr.reverse()
-
+const twoOldestAges = ages => ages.sort((a, b) => a-b).slice(-2);
 
 
 
