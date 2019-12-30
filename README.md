@@ -1,20 +1,21 @@
 # solved-tasks
 
-#### Two Oldest Ages
+#### Sum of two lowest positive integers
      
- The two oldest ages function/method needs to be completed. It should take an array of numbers as its argument and return the two highest numbers within the array. The returned value should be an array in the format [second oldest age, oldest age].
+ Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
  
- The order of the numbers passed in could be any order. The array will always include at least 2 items.
+ For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
  
- For example:
- 
- twoOldestAges( [1, 2, 10, 8] ) // should return [8, 10]
+ [10, 343445353, 3453445, 3453545353453] should return 3453455.
   
    
    
 ```javascript
 
-const twoOldestAges = ages => ages.sort((a, b) => a-b).slice(-2);
+function sumTwoSmallestNumbers(numbers) {  
+  numbers.sort((a, b)=> a-b)
+  return numbers[0]+ numbers[1];
+}
 
 
 
