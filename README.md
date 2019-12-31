@@ -1,28 +1,13 @@
 # solved-tasks
 
-#### CSV representation of array
+#### Enumerable Magic #1 - True for All?
      
- Create a function that returns the CSV representation of a two-dimensional numeric array.
- 
- Example:
- 
- input:
-    [[ 0, 1, 2, 3, 4 ],
-     [ 10,11,12,13,14 ],
-     [ 20,21,22,23,24 ],
-     [ 30,31,32,33,34 ]] 
- 
- output:
-      '0,1,2,3,4\n'
-     +'10,11,12,13,14\n'
-     +'20,21,22,23,24\n'
-     +'30,31,32,33,34'
- Array's length > 2.
+ Create a method all which takes an array and a predicate (function pointer), and returns true if the predicate returns true for every element in the array. Otherwise, it should return false. If the array is empty, it should return true, since technically nothing failed the test.
    
    
 ```javascript
 
-const toCsvText = a => a.join('\n');
+const all = (arr, fun) => arr.every(fun);
 
 
 
