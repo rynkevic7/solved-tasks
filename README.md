@@ -1,15 +1,19 @@
 # solved-tasks
 
-#### String Templates - Bug Fixing #5
+#### Printing Array elements with Comma delimiters
      
- String Templates - Bug Fixing #5
- Oh no! Timmy hasn't followed instructions very carefully and forgot how to use the new String Template feature, Help Timmy with his string template so it works as he expects!
-  
+ Input: Array of elements
+ 
+ ["h","o","l","a"]
+ 
+ Output: String with comma delimited elements of the array in th same order.
+ 
+ "h,o,l,a"
    
    
 ```javascript
 
-const buildString = (...template) => `I like ${template.join(', ')}!`;
+const printArray = a => a.join();
 
 
 
