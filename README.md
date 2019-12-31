@@ -1,13 +1,28 @@
 # solved-tasks
 
-#### Enumerable Magic #1 - True for All?
+#### Grasshopper - Array Mean
      
- Create a method all which takes an array and a predicate (function pointer), and returns true if the predicate returns true for every element in the array. Otherwise, it should return false. If the array is empty, it should return true, since technically nothing failed the test.
-   
+ Find Mean
+ Find the mean (average) of a list of numbers in an array.
+ 
+ Information
+ To find the mean (average) of a set of numbers add all of the numbers together and divide by the number of values in the list.
+ 
+ For an example list of 1, 3, 5, 7
+ 
+ 1. Add all of the numbers
+ 
+ 1+3+5+7 = 16
+ 2. Divide by the number of values in the list. In this example there are 4 numbers in the list.
+ 
+ 16/4 = 4
+ 3. The mean (or average) of this list is 4  
    
 ```javascript
 
-const all = (arr, fun) => arr.every(fun);
+var findAverage = function (nums) {
+  return nums.reduce((acc, el) => acc+el)/nums.length;
+}
 
 
 
