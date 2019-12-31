@@ -1,19 +1,28 @@
 # solved-tasks
 
-#### Printing Array elements with Comma delimiters
+#### CSV representation of array
      
- Input: Array of elements
+ Create a function that returns the CSV representation of a two-dimensional numeric array.
  
- ["h","o","l","a"]
+ Example:
  
- Output: String with comma delimited elements of the array in th same order.
+ input:
+    [[ 0, 1, 2, 3, 4 ],
+     [ 10,11,12,13,14 ],
+     [ 20,21,22,23,24 ],
+     [ 30,31,32,33,34 ]] 
  
- "h,o,l,a"
+ output:
+      '0,1,2,3,4\n'
+     +'10,11,12,13,14\n'
+     +'20,21,22,23,24\n'
+     +'30,31,32,33,34'
+ Array's length > 2.
    
    
 ```javascript
 
-const printArray = a => a.join();
+const toCsvText = a => a.join('\n');
 
 
 
