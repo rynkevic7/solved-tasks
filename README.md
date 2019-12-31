@@ -1,16 +1,16 @@
 # solved-tasks
 
-#### Beginner - Reduce but Grow
+#### Array plus array
      
- Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+ I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
  
- [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+ P.S. Each array includes only integer numbers. Output is a number too.
  
  
  
 ```javascript
 
-const grow = x => x.reduce((a, e) => a * e, 1);
+const arrayPlusArray = (arr1, arr2) => arr1.reduce((a, e)=> a + e, 0) + arr2.reduce((a, e)=> a + e, 0);
 
 
 
