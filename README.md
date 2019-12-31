@@ -1,17 +1,13 @@
 # solved-tasks
 
-#### Array plus array
+#### Remove First and Last Character Part Two
      
- I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
- 
- P.S. Each array includes only integer numbers. Output is a number too.
- 
+ This is a spin off of my first kata. You are given a list of character sequences as a comma separated string. Write a function which returns another string containing all the character sequences except the first and the last ones. If the input string is empty, or the removal of the first and last items would cause the string to be empty, return a null value.
  
  
 ```javascript
 
-const arrayPlusArray = (arr1, arr2) => arr1.reduce((a, e)=> a + e, 0) + arr2.reduce((a, e)=> a + e, 0);
-
+const array = arr => arr.split(',').slice(1, -1).join(' ') || null;
 
 
 
