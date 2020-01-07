@@ -1,21 +1,14 @@
 # solved-tasks
 
-#### Template Strings
+#### Returning Strings
      
- Template Strings
- Template Strings, this kata is mainly aimed at the new JS ES6 Update introducing Template Strings
- Task
- Your task is to return the correct string using the Template String Feature.
- Input
- Two Strings, no validation is needed.
- Output
- You must output a string containing the two strings with the word ```' are '```
+ Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+ 
+ *[Make sure you type the exact thing I wrote or the program may not execute properly]*
  
 ```javascript
 
-const TempleStrings = function(obj, feature) {
-  return obj + " are " + feature;
-}
+const greet = name => `Hello, ${name} how are you doing today?`;
 
 
 
