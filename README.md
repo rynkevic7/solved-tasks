@@ -1,20 +1,17 @@
 # solved-tasks
 
-#### Grasshopper - Combine strings
+#### Grasshopper - Debug sayHello
      
- Combine strings function
- Create a function named combineNames(combine_names in python, ruby) that accepts two parameters (first and last name). The function should return the full name.
+ Debugging sayHello function
+ The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. It is your job to fix the code and get the program working again!
  
- Example:
+ Example output:
  
- combineNames('James', 'Stevens')
- returns:
- 
- 'James Stevens'
+ Hello, Mr. Spock
  
 ```javascript
 
-const combineNames = (first, last) => first + ' ' + last;
+const sayHello = name => 'Hello, ' + name;
 
 
 
