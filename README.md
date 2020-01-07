@@ -1,14 +1,21 @@
 # solved-tasks
 
-#### Jenny's secret message
+#### Template Strings
      
- Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
- 
- Can you help her?
+ Template Strings
+ Template Strings, this kata is mainly aimed at the new JS ES6 Update introducing Template Strings
+ Task
+ Your task is to return the correct string using the Template String Feature.
+ Input
+ Two Strings, no validation is needed.
+ Output
+ You must output a string containing the two strings with the word ```' are '```
  
 ```javascript
 
-const greet = name => name === "Johnny" ? "Hello, my love!" : "Hello, " + name + "!";
+const TempleStrings = function(obj, feature) {
+  return obj + " are " + feature;
+}
 
 
 
