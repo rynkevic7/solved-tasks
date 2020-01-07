@@ -1,13 +1,14 @@
 # solved-tasks
 
-#### Remove First and Last Character Part Two
+#### Jenny's secret message
      
- This is a spin off of my first kata. You are given a list of character sequences as a comma separated string. Write a function which returns another string containing all the character sequences except the first and the last ones. If the input string is empty, or the removal of the first and last items would cause the string to be empty, return a null value.
+ Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
  
+ Can you help her?
  
 ```javascript
 
-const array = arr => arr.split(',').slice(1, -1).join(' ') || null;
+const greet = name => name === "Johnny" ? "Hello, my love!" : "Hello, " + name + "!";
 
 
 
