@@ -1,14 +1,20 @@
 # solved-tasks
 
-#### Returning Strings
+#### Grasshopper - Combine strings
      
- Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+ Combine strings function
+ Create a function named combineNames(combine_names in python, ruby) that accepts two parameters (first and last name). The function should return the full name.
  
- *[Make sure you type the exact thing I wrote or the program may not execute properly]*
+ Example:
+ 
+ combineNames('James', 'Stevens')
+ returns:
+ 
+ 'James Stevens'
  
 ```javascript
 
-const greet = name => `Hello, ${name} how are you doing today?`;
+const combineNames = (first, last) => first + ' ' + last;
 
 
 
