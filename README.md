@@ -1,27 +1,19 @@
 # solved-tasks
 
-#### Regex validate PIN code
+#### Is this my tail?
      
- ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+ Some new animals have arrived at the zoo. The zoo keeper is concerned that perhaps the animals do not have the right tails. To help her, you must correct the broken function to make sure that the second argument (tail), is the same as the last letter of the first argument (body) - otherwise the tail wouldn't fit!
  
- If the function is passed a valid PIN string, return true, else return false.
+ If the tail is right return true, else return false.
  
- eg:
+ The arguments will always be strings, and normal letters.
  
- validatePIN("1234") === true
- validatePIN("12345") === false
- validatePIN("a234") === false
+ For Haskell, body has the type of String and tail has the type of Char. For Go, body has type string and tail has type rune.
 
  
 ```javascript
 
-function validatePIN(pin) { 
-    let value = false; 
-    if (/^[0-9]{4}$/.test(pin) === true || /^[0-9]{6}$/.test(pin) === true) { 
-        value = true; 
-    }
-    return value;
-}
+const correctTail = (body, tail) => body[body.length-1] == tail ? true : false;
 
 
 
