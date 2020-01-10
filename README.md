@@ -1,18 +1,35 @@
 # solved-tasks
 
-#### Spacify
+#### Unique In Order
      
 
  
- Modify the spacify function so that it returns the given string with spaces inserted between each character.
+ Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
  
- spacify("hello world") // returns "h e l l o   w o r l d"
+ For example:
+ 
+ uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+ uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+ uniqueInOrder([1,2,2,3,3])       == [1,2,3]
  
  
 
 ```javascript
 
-const spacify = str => str.split('').join(' ');
+function uniqueInOrder(iterable){
+  let res = [];
+  let last;
+  
+  if(iterable.length == 0) return [];
+  
+  for(let i = 0; i < iterable.length; i++){
+  if(iterable[i] !== last){ 
+  last = iterable[i]
+  res.push(last)
+  }
+  }
+  return res;
+};
 
 
 
