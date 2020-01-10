@@ -1,13 +1,24 @@
 # solved-tasks
 
-#### Remove First and Last Character
+#### Triple Trouble
      
- It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
-
+ #Triple Trouble
+ 
+ Create a function that will return a string that combines all of the letters of the three inputed strings in groups. Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
+ 
+ Ex) Input: "aa", "bb" , "cc" => Output: "abcabc"
+ 
+ Note: You can expect all of the inputs to be the same length.
 
 ```javascript
 
-const removeChar = str => str.slice(1, -1)
+function tripleTrouble(one, two, three){
+  let res = '';
+  for(let i = 0; i < one.length; i++){
+     res += `${one[i]}${two[i]}${three[i]}`
+  }
+  return res;
+ };
 
 
 
