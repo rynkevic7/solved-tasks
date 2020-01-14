@@ -1,35 +1,21 @@
 # solved-tasks
 
-#### Unique In Order
+#### Is it a palindrome?
      
 
  
- Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+ Write function isPalindrome that checks if a given string (case insensitive) is a palindrome.
  
- For example:
+ In Racket, the function is called palindrome?
  
- uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
- uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
- uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+ (palindrome? "nope") ; returns #f
+ (palindrome? "Yay")  ; returns #t
  
  
 
 ```javascript
 
-function uniqueInOrder(iterable){
-  let res = [];
-  let last;
-  
-  if(iterable.length == 0) return [];
-  
-  for(let i = 0; i < iterable.length; i++){
-  if(iterable[i] !== last){ 
-  last = iterable[i]
-  res.push(last)
-  }
-  }
-  return res;
-};
+fconst isPalindrome = x => x.toLowerCase().split('').reverse().join('') === x.toLowerCase() ? true : false;
 
 
 
