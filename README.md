@@ -1,35 +1,20 @@
 # solved-tasks
 
-#### Unique In Order
+#### Capitalization and Mutability
      
 
  
- Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+ Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
  
- For example:
+ Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
  
- uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
- uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
- uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+ Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
  
  
 
 ```javascript
 
-function uniqueInOrder(iterable){
-  let res = [];
-  let last;
-  
-  if(iterable.length == 0) return [];
-  
-  for(let i = 0; i < iterable.length; i++){
-  if(iterable[i] !== last){ 
-  last = iterable[i]
-  res.push(last)
-  }
-  }
-  return res;
-};
+const capitalizeWord = word => `${word.substr(0, 1).toUpperCase()}${word.substr(1)}`;
 
 
 
