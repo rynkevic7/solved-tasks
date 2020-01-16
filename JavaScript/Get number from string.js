@@ -18,3 +18,7 @@ function getNumberFromString(s) {
     let r = s.replace(/\D/g, '')
     return +r;
 }
+
+//or
+
+const getNumberFromString=s=>+s.replace(/\D/g, '');
