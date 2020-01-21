@@ -37,3 +37,8 @@ questions = addNewProperty(questions, 'usersAnswer', null);
 questions.forEach(function (i) {
     i.usersAnswer = null;
 });
+
+function numObj(s){
+    console.log(s)
+    return s.map(value => ({value.toString(): String.fromCharCode(value)}))
+}
