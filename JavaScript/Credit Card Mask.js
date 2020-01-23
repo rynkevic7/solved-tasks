@@ -19,6 +19,6 @@ function maskify(cc) {
     for(let i = 0; i < cc.length -4; i++){
         if(cc[i]!== '#')
             masked += '#';
-    };
+    }
     return masked + cc.slice(-4)
-};
+}

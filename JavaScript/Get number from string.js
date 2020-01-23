@@ -15,7 +15,7 @@ GetNumberFromString(string s)
  */
 
 function getNumberFromString(s) {
-    let r = s.replace(/\D/g, '')
+    let r = s.replace(/\D/g, '');
     return +r;
 }
 

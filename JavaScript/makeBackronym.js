@@ -44,7 +44,7 @@ const dict = {
     X: 'xylophone',
     Y: 'yogic',
     Z: 'zero',
-}
+};
 
 const makeBackronym = string =>
     string

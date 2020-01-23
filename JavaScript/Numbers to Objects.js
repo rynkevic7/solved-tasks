@@ -13,7 +13,7 @@ All inputs will be arrays of numbers. All character codes are valid lower case l
 function numObj(s){
     return s.map(value => {
         let obj = {};
-        obj[value] = String.fromCharCode(value)
+        obj[value] = String.fromCharCode(value);
         return obj
     })
 }

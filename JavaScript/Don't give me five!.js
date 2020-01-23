@@ -17,11 +17,11 @@ I have also created other katas. Take a look if you enjoyed this kata!
  */
 
 function dontGiveMeFive(start, end){
-    console.log(start, end)
+    console.log(start, end);
     let res = 0;
     for(let i = start; i <= end; i++){
         if (i.toString().includes(5)) {
-            continue;
+
         } else res ++;
     }
     return res;

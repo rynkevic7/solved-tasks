@@ -32,8 +32,8 @@ function checkThreeAndTwo(array) {
 //or
 
 function checkThreeAndTwo(array) {
-    let t = {a:0, b:0, c:0}
-    let a = array.map(x => t[x]++)
-    let y = Object.values(t)
+    let t = {a:0, b:0, c:0};
+    let a = array.map(x => t[x]++);
+    let y = Object.values(t);
     return y.includes(3) && y.includes(2)
 }

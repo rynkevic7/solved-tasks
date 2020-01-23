@@ -39,6 +39,6 @@ questions.forEach(function (i) {
 });
 
 function numObj(s){
-    console.log(s)
-    return s.map(value => ({value.toString(): String.fromCharCode(value)}))
+    console.log(s);
+    return s.map(value => ({value.toString();: String.fromCharCode(value)}))
 }

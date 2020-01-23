@@ -20,6 +20,6 @@ function daysRepresented(trips){
             arr.push(i)
         }
         return arr
-    })
+    });
     return [...new Set([].concat(...arr))].length
 }

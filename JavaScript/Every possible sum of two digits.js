@@ -11,9 +11,9 @@ Therefore the result must be:
 
 function digits(num){
     let arr = [];
-    let nums = num.toString()
+    let nums = num.toString();
     for(let i = 0; i < nums.length; i++)
         for(let j = i+1; j < nums.length; j++)
-            arr.push(+(nums[i]) + +(nums[j]))
+            arr.push(+(nums[i]) + +(nums[j]));
     return arr
 }

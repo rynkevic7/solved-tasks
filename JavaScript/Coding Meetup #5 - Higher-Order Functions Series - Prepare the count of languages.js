@@ -29,6 +29,6 @@ function countLanguages(list) {
         } else {
             res[f.language] = 1;
         }
-    })
+    });
     return res;
 }

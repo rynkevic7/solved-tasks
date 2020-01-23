@@ -49,6 +49,6 @@ function greet(l) {
         spanish: 'Bienvenido',
         swedish: 'Valkommen',
         welsh: 'Croeso'
-    }
+    };
     return la[l] || la.english;
 }
