@@ -45,3 +45,6 @@ function nameScore(name){
             if(key.includes(a)) score += alpha[key];
     return { [name]: score }
 }
+
+
+
