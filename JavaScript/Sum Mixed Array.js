@@ -16,4 +16,6 @@ function sumMix(x){
 
 //or
 
-const sumMix=x=>x.reduce((a,b)=>+b+a,0)
+function sumMix(x){
+    return x.map(a => +a).reduce((a, b) => a + b);
+}
