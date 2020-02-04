@@ -26,5 +26,23 @@ const tips = {
 
 const calculateTip = (amount, rating) =>
     Object.keys(tips).includes(rating.toLowerCase())
-        ? Math.round(amount * tips[rating.toLowerCase()])
+        ? Math.ceil(amount * tips[rating.toLowerCase()])
         : "Rating not recognised"
+
+
+//ork
+
+const t = {
+    terrible: 0.00,
+    poor: 0.05,
+    good: 0.1,
+    great: 0.15,
+    excellent: 0.2,
+}
+
+function calculateTip(amount, rating) {
+    rating  = rating.toLowerCase();
+
+    return rating in t ? Math.ceil(t[rating] * amount) : "Rating not recognised";
+
+}
